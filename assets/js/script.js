@@ -12,3 +12,24 @@ const fetchFunc = async () => {
 };
 
 fetchFunc();
+ 
+
+userInputApi = function() {
+    
+    fetch('https://api.giphy.com/v1/gifs/search?api_key=yBtaVHxMEXDfPQQhAsxu4RIaqyzHd9CN&q=explosion&limit=25&offset=0&rating=g&lang=en')
+    .then(function(response) {
+      return response.json();
+     })
+     .then(function(response) {
+     console.log(response.data[0]);
+     
+     const gifLocation = document.querySelector('.gif')
+ 
+     var gifImg = document.createElement('img');
+     gifImg.setAttribute('src', response.data[0].images.fixed_height.url);
+       
+     gifLocation.appendChild(gifImg)
+   })
+}
+
+   userInputApi()
