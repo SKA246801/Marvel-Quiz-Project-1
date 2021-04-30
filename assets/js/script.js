@@ -13,7 +13,7 @@ const fetchFunc = async () => {
 
 fetchFunc();
  
-userInputApi = function() {
+const userInputApi = function() {
     fetch('https://api.giphy.com/v1/gifs/search?api_key=yBtaVHxMEXDfPQQhAsxu4RIaqyzHd9CN&q=explosion&limit=25&offset=0&rating=g&lang=en')
     .then(function(response) {
       return response.json();
