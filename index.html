@@ -11,19 +11,34 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
   </head>
   <body class="grey lighten-1">
-    <div class="center-align">
+
+    <div class="center-align" id="disappear1">
+
+    <div class="row section">
+      <div class="col s12">
+
         <h1>Which Marvel character are you?</h1>
+      </div>
+      <div class="col s5 push-s7">
         <h4>Click here to take the quiz!</h4>
-        <button class="grey text-darken-3">Start Now</button>
+
+        <button class="grey text-darken-3" onclick="window.location.href = 'quiz.html'">Start Now</button>
     </div>
     <div>
       <img class="responsive-img" src="">
+
+        <button class="grey text-darken-3 btn-large center-align">Start Now</button>
+      </div>
+      <div class="col s7 pull-s5">
+        <img id="homeImage" class="responsive-img z-depth-4" src="./assets/css/Homepage-Image.jpg">
+      </div>
+
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <div class="gif"></div>
     <script src="./assets/js/script.js"></script>
   </body>
 </html>
