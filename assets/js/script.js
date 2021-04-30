@@ -13,9 +13,7 @@ const fetchFunc = async () => {
 
 fetchFunc();
  
-
-userInputApi = function() {
-    
+const userInputApi = function() {
     fetch('https://api.giphy.com/v1/gifs/search?api_key=yBtaVHxMEXDfPQQhAsxu4RIaqyzHd9CN&q=explosion&limit=25&offset=0&rating=g&lang=en')
     .then(function(response) {
       return response.json();
@@ -27,12 +25,10 @@ userInputApi = function() {
  
      var gifImg = document.createElement('img');
      gifImg.setAttribute('src', response.data[0].images.fixed_height.url);
-       
+     gifImg.setAttribute('id', 'gif')
      gifLocation.appendChild(gifImg)
    })
 }
-
-   userInputApi()
 
 
 // Written questions
@@ -268,3 +264,4 @@ function next1() {
 function restart1() {
   location.reload();
   }
+
