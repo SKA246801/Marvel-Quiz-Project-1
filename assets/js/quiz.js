@@ -396,9 +396,6 @@ function restart1() {
 }
 
 const finalHero = () => {
-  scores.ironMan = 12;
-  scores.thor = 12;
-  scores.spiderMan = 12;
   let chosenHero = "captainAmerica";
   let names = Object.keys(scores);
 
