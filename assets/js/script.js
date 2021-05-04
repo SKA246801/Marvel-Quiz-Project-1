@@ -5,7 +5,7 @@ const fetchFunc = async () => {
   let ts = Date.now();
   let hashKey = md5(ts + PRIVATE_KEY + PUBLIC_KEY);
   let request = await fetch(
-    `https://gateway.marvel.com:443/v1/public/characters?ts=${ts}&apikey=${PUBLIC_KEY}&hash=${hashKey}&name=hulk`
+    `https://gateway.marvel.com:443/v1/public/characters?ts=${ts}&apikey=${PUBLIC_KEY}&hash=${hashKey}&name=captain marvel`
   );
   let data = await request.json();
   console.log(data);

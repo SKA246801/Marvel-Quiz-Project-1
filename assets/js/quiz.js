@@ -406,9 +406,27 @@ const finalHero = () => {
       chosenHero = Math.random() < 0.5 ? names[i] : chosenHero;
     }
   }
-  //   make marvel api fetch with chosen hero
-  //  marvelFetch(chosenHero) or whatever the fetch function is called
-  console.log(chosenHero);
+  if (chosenHero === 'captainAmerica') {
+    chosenHero = 'Captain America'}
+  // } else if (chosenHero === ) {
+
+  // }
+  generateHero(chosenHero)
 };
+
+
+const PUBLIC_KEY = "407e4467d27709793035e60508d32fdf";
+const PRIVATE_KEY = "d49a689257f6451c7403a124fd37f1845b3719cc";
+
+const generateHero = async (chosenHero) => {
+  let ts = Date.now();
+  let hashKey = md5(ts + PRIVATE_KEY + PUBLIC_KEY);
+  let request = await fetch(
+    `https://gateway.marvel.com:443/v1/public/characters?ts=${ts}&apikey=${PUBLIC_KEY}&hash=${hashKey}&name=${chosenHero}`
+  );
+  let data = await request.json();
+  console.log(data);
+
+}
 
 begin1();
