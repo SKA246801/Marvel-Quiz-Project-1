@@ -2,14 +2,11 @@ const gifLocation = document.querySelector('.gif')
 
 
 const userInputApi = function(gifSearch) {
-  console.log(gifSearch)
   fetch(`https://api.giphy.com/v1/gifs/search?api_key=yBtaVHxMEXDfPQQhAsxu4RIaqyzHd9CN&q=${gifSearch}&limit=25&offset=0&rating=g&lang=en`)
   .then(function(response) {
     return response.json();
    })
-   .then(function(response) {
-   console.log(response.data[0]);
-   
+   .then(function(response) { 
 
    var gifImg = document.createElement('img');
    gifImg.setAttribute('src', response.data[0].images.fixed_height.url);
@@ -55,7 +52,6 @@ let captainMarvel = 0
 
 //  if statement for q and a
 function begin1() {
-console.log("click")
 disappear1.innerHTML = '';
 message1.innerHTML = question1[0];
 message2.innerHTML = options1;
@@ -105,7 +101,7 @@ userInputApi('murder')
 }
 
 function q3c() {
-gifLocation.innerHTML = ""
+  gifLocation.innerHTML = ""
 message2.innerHTML = '';
 message4.innerHTML = '<button class=buttons2 onclick=next1()>Next</button>';
 captainAmerica++
@@ -116,28 +112,28 @@ userInputApi('negotiating')
 }
 
 function q3i() {
-gifLocation.innerHTML = ""
-
-message2.innerHTML = '';
-message4.innerHTML = '<button class=buttons2 onclick=next1()>Next</button>';
-hulk++
+  gifLocation.innerHTML = ""
+  
+  message2.innerHTML = '';
+  message4.innerHTML = '<button class=buttons2 onclick=next1()>Next</button>';
+  hulk++
 thor++
 captainMarvel++
 userInputApi('fighting')
 }
 
 function q4c() {
-gifLocation.innerHTML = ""
-message2.innerHTML = '';
-message4.innerHTML = '<button class=buttons2 onclick=next1()>Next</button>';
+  gifLocation.innerHTML = ""
+  message2.innerHTML = '';
+  message4.innerHTML = '<button class=buttons2 onclick=next1()>Next</button>';
 hulk++
 ironMan++
 userInputApi('annoying')
 }
 
 function q4i() {
-gifLocation.innerHTML = ""
-
+  gifLocation.innerHTML = ""
+  
 message2.innerHTML = '';
 message4.innerHTML = '<button class=buttons2 onclick=next1()>Next</button>';
 captainAmerica++
@@ -149,8 +145,8 @@ userInputApi('not annoying')
 }
 
 function q5c() {
-gifLocation.innerHTML = ""
-message2.innerHTML = '';
+  gifLocation.innerHTML = ""
+  message2.innerHTML = '';
 message4.innerHTML = '<button class=buttons2 onclick=next1()>Next</button>';
 captainAmerica++
 spiderMan++
@@ -159,9 +155,9 @@ userInputApi('second chance')
 }
 
 function q5i() {
-gifLocation.innerHTML = ""
-
-message2.innerHTML = '';
+  gifLocation.innerHTML = ""
+  
+  message2.innerHTML = '';
 message4.innerHTML = '<button class=buttons2 onclick=next1()>Next</button>';
 ironMan++
 hulk++
@@ -171,9 +167,9 @@ userInputApi('no chance')
 }
 
 function q6c() {
-gifLocation.innerHTML = ""
-message2.innerHTML = '';
-message4.innerHTML = '<button class=buttons2 onclick=next1()>Next</button>';
+  gifLocation.innerHTML = ""
+  message2.innerHTML = '';
+  message4.innerHTML = '<button class=buttons2 onclick=next1()>Next</button>';
 ironMan++
 captainAmerica++
 spiderMan++
@@ -181,11 +177,11 @@ userInputApi('smart')
 }
 
 function q6i() {
-gifLocation.innerHTML = ""
-
-message2.innerHTML = '';
-message4.innerHTML = '<button class=buttons2 onclick=next1()>Next</button>';
-hulk++
+  gifLocation.innerHTML = ""
+  
+  message2.innerHTML = '';
+  message4.innerHTML = '<button class=buttons2 onclick=next1()>Next</button>';
+  hulk++
 thor++
 blackWidow++
 captainMarvel++
@@ -193,11 +189,11 @@ userInputApi('stupid')
 }
 
 function q7c() {
-gifLocation.innerHTML = ""
-message2.innerHTML = '';
-message4.innerHTML = '<button class=buttons2 onclick=next1()>Next</button>';
-ironMan++
-hulk++
+  gifLocation.innerHTML = ""
+  message2.innerHTML = '';
+  message4.innerHTML = '<button class=buttons2 onclick=next1()>Next</button>';
+  ironMan++
+  hulk++
 thor++
 spiderMan++
 captainMarvel++
@@ -205,8 +201,8 @@ userInputApi('alone')
 }
 
 function q7i() {
-gifLocation.innerHTML = ""
-
+  gifLocation.innerHTML = ""
+  
 message2.innerHTML = '';
 message4.innerHTML = '<button class=buttons2 onclick=next1()>Next</button>';
 captainAmerica++
@@ -215,18 +211,18 @@ userInputApi('teamwork')
 }
 
 function q8c() {
-gifLocation.innerHTML = ""
-message2.innerHTML = '';
-message4.innerHTML = '<button class=buttons2 onclick=next1()>Next</button>';
+  gifLocation.innerHTML = ""
+  message2.innerHTML = '';
+  message4.innerHTML = '<button class=buttons2 onclick=next1()>Next</button>';
 captainAmerica++
 spiderMan++
 userInputApi('optimist')
 }
 
 function q8i() {
-gifLocation.innerHTML = ""
-
-message2.innerHTML = '';
+  gifLocation.innerHTML = ""
+  
+  message2.innerHTML = '';
 message4.innerHTML = '<button class=buttons2 onclick=next1()>Next</button>';
 hulk++
 thor++
@@ -237,29 +233,29 @@ userInputApi('sad')
 }
 
 function q9c() {
-gifLocation.innerHTML = ""
-message2.innerHTML = '';
-message4.innerHTML = '<button class=buttons2 onclick=next1()>Next</button>';
-thor++
-blackWidow++
+  gifLocation.innerHTML = ""
+  message2.innerHTML = '';
+  message4.innerHTML = '<button class=buttons2 onclick=next1()>Next</button>';
+  thor++
+  blackWidow++
 captainMarvel++
 spiderMan++
 userInputApi('dreamer')
 }
 
 function q9i() {
-gifLocation.innerHTML = ""
-
-message2.innerHTML = '';
-message4.innerHTML = '<button class=buttons2 onclick=next1()>Next</button>';
-ironMan++
-hulk++
-spiderMan++
-userInputApi("don' dream")
+  gifLocation.innerHTML = ""
+  
+  message2.innerHTML = '';
+  message4.innerHTML = '<button class=buttons2 onclick=next1()>Next</button>';
+  ironMan++
+  hulk++
+  spiderMan++
+  userInputApi("don't dream")
 }
 
 function q10c() {
-gifLocation.innerHTML = ""
+  gifLocation.innerHTML = ""
 message2.innerHTML = '';
 message4.innerHTML = '<button class=buttons2 onclick=next1()>Next</button>';
 captainAmerica++
@@ -270,10 +266,10 @@ userInputApi('calculate')
 }
 
 function q10i() {
-gifLocation.innerHTML = ""
-
-message2.innerHTML = '';
-message4.innerHTML = '<button class=buttons2 onclick=next1()>Next</button>';
+  gifLocation.innerHTML = ""
+  
+  message2.innerHTML = '';
+  message4.innerHTML = '<button class=buttons2 onclick=next1()>Next</button>';
 ironMan++
 hulk++
 thor++
@@ -282,16 +278,16 @@ userInputApi('reckless')
 
 function q11c() {
   gifLocation.innerHTML = ""
-
+  
   message2.innerHTML = '';
   message4.innerHTML = '<button class=buttons2 onclick=next1()>Next</button>';
   ironMan++
   captainAmerica++
   blackWidow++
   userInputApi('calm')
-  }
-  
-  function q11i() {
+}
+
+function q11i() {
   gifLocation.innerHTML = ""
   
   message2.innerHTML = '';
@@ -301,16 +297,16 @@ function q11c() {
   spiderMan++
   captainAmerica++
   userInputApi('emotional')
-  }
-
-function next1() {
-if (a == '2') {
-  message1.innerHTML = question1[1];
-  message2.innerHTML = options2;
-  number1.innerHTML = a++;
 }
 
-else if (a == '3') {
+function next1() {
+  if (a == '2') {
+    message1.innerHTML = question1[1];
+    message2.innerHTML = options2;
+    number1.innerHTML = a++;
+  }
+  
+  else if (a == '3') {
   message1.innerHTML = question1[2];
   message2.innerHTML = options3;
   number1.innerHTML = a++;
@@ -320,7 +316,7 @@ else if (a == '4') {
   message1.innerHTML = question1[3];
   message2.innerHTML = options4;
   number1.innerHTML = a++;
-
+  
 }
 
 else if (a == '5') {
@@ -341,7 +337,7 @@ else if (a == '7') {
   message1.innerHTML = question1[6];
   message2.innerHTML = options7;
   number1.innerHTML = a++;
-
+  
 }
 
 else if (a == '8') {
@@ -355,14 +351,14 @@ else if (a == '9') {
   message1.innerHTML = question1[8];
   message2.innerHTML = options9;
   number1.innerHTML = a++;
-
+  
 }
 
 else if (a == '10') {
   message1.innerHTML = question1[9];
   message2.innerHTML = options10;
   number1.innerHTML = a++;
-
+  
 } else if (a == '11') {
   message1.innerHTML = question1[10]
   message2.innerHTML = options11
@@ -371,6 +367,13 @@ else if (a == '10') {
   message1.innerHTML = 'End of Quiz';
   message2.innerHTML = '';
   message4.innerHTML = '<button class=buttons2 onclick=restart1()>Restart</button>';
+  console.log("ironMan" + ironMan)
+  console.log("hulk" + hulk)
+  console.log("captainAmerica" + captainAmerica)
+  console.log("captainMarvel" + captainMarvel)
+  console.log("thor" + thor)
+  console.log("blackWidow" + blackWidow)
+  console.log("spiderMan" + spiderMan)
 }
 }
 
