@@ -1,12 +1,15 @@
-const userInputApi = function() {
-  fetch('https://api.giphy.com/v1/gifs/search?api_key=yBtaVHxMEXDfPQQhAsxu4RIaqyzHd9CN&q=explosion&limit=25&offset=0&rating=g&lang=en')
+const gifLocation = document.querySelector('.gif')
+
+
+const userInputApi = function(gifSearch) {
+  console.log(gifSearch)
+  fetch(`https://api.giphy.com/v1/gifs/search?api_key=yBtaVHxMEXDfPQQhAsxu4RIaqyzHd9CN&q=${gifSearch}&limit=25&offset=0&rating=g&lang=en`)
   .then(function(response) {
     return response.json();
    })
    .then(function(response) {
    console.log(response.data[0]);
    
-   const gifLocation = document.querySelector('.gif')
 
    var gifImg = document.createElement('img');
    gifImg.setAttribute('src', response.data[0].images.fixed_height.url);
@@ -22,22 +25,33 @@ const question1 = ['Power is not something to be taken lightly.',
 'Negotiations work much better than fighting.',
 'People consider me annoying.',
 'I feel that everyone deserves a second chance.',
+'I consider myself very intelligent', 'I work better alone', 'I consider myself to be an optimist',
+ 'I am not a dreamer, I am a realist', 'I am calculated, not impulsive', 
+'I consider myself to be calm and not very emotional'
 ];
 // Written answers
-const options1 = ['<button class=buttons1 onclick=q1i()>test 1</button><br /><br /><button class=buttons1 onclick=q1i()>test 2</button><br /><br /><button class=buttons1 onclick=q1c()>test 3</button>'];
-const options2 = ['<button class=buttons1 onclick=q2c()>test 1</button><br /><br /><button class=buttons1 onclick=q2i()>test 2</button>'];
-const options3 = ['<button class=buttons1 onclick=q3c()>test 1</button><br /><br /><button class=buttons1 onclick=q3i()>test 2</button>'];
-const options4 = ['<button class=buttons1 onclick=q4i()>test 1</button><br /><br /><button class=buttons1 onclick=q4c()>test 2</button>'];
-const options5 = ['<button class=buttons1 onclick=q5c()>test 1</button><br /><br /><button class=buttons1 onclick=q5i()>test 2</button>'];
-const options6 = ['<button class=buttons1 onclick=q6i()>test 1</button><br /><br /><button class=buttons1 onclick=q6c()>test 2</button>'];
-const options7 = ['<button class=buttons1 onclick=q7c()>test 1</button><br /><br /><button class=buttons1 onclick=q7i()>test 2</button>'];
-const options8 = ['<button class=buttons1 onclick=q8c()>test 1</button><br /><br /><button class=buttons1 onclick=q8i()>test 2</button>'];
-const options9 = ['<button class=buttons1 onclick=q9c()>test 1</button><br /><br /><button class=buttons1 onclick=q9i()>test 2</button>'];
-const options10 = ['<button class=buttons1 onclick=q10i()>test 1</button><br /><br /><button class=buttons1 onclick=q10c()>test 2</button>'];
+const options1 = ['<button class=buttons1 onclick=q1i()>Agree</button><br /><br /><button class=buttons1 onclick=q1i()>Disagree</button>'];
+const options2 = ['<button class=buttons1 onclick=q2c()>Agree</button><br /><br /><button class=buttons1 onclick=q2i()>Disagree</button>'];
+const options3 = ['<button class=buttons1 onclick=q3c()>Agree</button><br /><br /><button class=buttons1 onclick=q3i()>Disagree</button>'];
+const options4 = ['<button class=buttons1 onclick=q4i()>Agree</button><br /><br /><button class=buttons1 onclick=q4c()>Disagree</button>'];
+const options5 = ['<button class=buttons1 onclick=q5c()>Agree</button><br /><br /><button class=buttons1 onclick=q5i()>Disagree</button>'];
+const options6 = ['<button class=buttons1 onclick=q6i()>Agree</button><br /><br /><button class=buttons1 onclick=q6c()>Disagree</button>'];
+const options7 = ['<button class=buttons1 onclick=q7c()>Agree</button><br /><br /><button class=buttons1 onclick=q7i()>Disagree</button>'];
+const options8 = ['<button class=buttons1 onclick=q8c()>Agree</button><br /><br /><button class=buttons1 onclick=q8i()>Disagree</button>'];
+const options9 = ['<button class=buttons1 onclick=q9c()>Agree</button><br /><br /><button class=buttons1 onclick=q9i()>Disagree</button>'];
+const options10 = ['<button class=buttons1 onclick=q10c()>Agree</button><br /><br /><button class=buttons1 onclick=q10i()>Disagree</button>'];
+const options11 = ['<button class=buttons1 onclick=q11c()>Agree</button><br /><br /><button class=buttons1 onclick=q11i()>Disagree</button>'];
 
 //  Declare each variable
 var a = 0;
 a++;
+let thor = 0
+let captainAmerica = 0
+let ironMan = 0
+let hulk = 0
+let spiderMan = 0
+let blackWidow = 0
+let captainMarvel = 0
 
 //  if statement for q and a
 function begin1() {
@@ -49,200 +63,313 @@ number1.innerHTML = a++;
 }
 
 function q1c() {
-message3.innerHTML = 'Correct.';
 message2.innerHTML = '';
 message4.innerHTML = '<button class=buttons2 onclick=next1()>Next</button>';
+captainAmerica++
+spiderMan++
+blackWidow++
+captainMarvel++
+userInputApi('weak')
 }
 
 function q1i() {
-message3.innerHTML = 'Incorrect.';
+
 message2.innerHTML = '';
 message4.innerHTML = '<button class=buttons2 onclick=next1()>Next</button>';
+ironMan++
+hulk++
+thor++
+userInputApi('powerful')
 }
 
 function q2c() {
-message3.innerHTML = 'Correct.';
+gifLocation.innerHTML = ""
 message2.innerHTML = '';
 message4.innerHTML = '<button class=buttons2 onclick=next1()>Next</button>';
+captainAmerica++
+spiderMan++
+captainMarvel++
+userInputApi('alive')
 }
 
 function q2i() {
-message3.innerHTML = 'Incorrect.';
+gifLocation.innerHTML = ""
+
 message2.innerHTML = '';
 message4.innerHTML = '<button class=buttons2 onclick=next1()>Next</button>';
+ironMan++
+hulk++
+thor++
+blackWidow++
+userInputApi('murder')
 }
 
 function q3c() {
-message3.innerHTML = 'Correct.';
+gifLocation.innerHTML = ""
 message2.innerHTML = '';
 message4.innerHTML = '<button class=buttons2 onclick=next1()>Next</button>';
+captainAmerica++
+spiderMan++
+ironMan++
+blackWidow++
+userInputApi('negotiating')
 }
 
 function q3i() {
-message3.innerHTML = 'Incorrect.';
+gifLocation.innerHTML = ""
+
 message2.innerHTML = '';
 message4.innerHTML = '<button class=buttons2 onclick=next1()>Next</button>';
+hulk++
+thor++
+captainMarvel++
+userInputApi('fighting')
 }
 
 function q4c() {
-message3.innerHTML = 'Correct.';
+gifLocation.innerHTML = ""
 message2.innerHTML = '';
 message4.innerHTML = '<button class=buttons2 onclick=next1()>Next</button>';
+hulk++
+ironMan++
+userInputApi('annoying')
 }
 
 function q4i() {
-message3.innerHTML = 'Incorrect.';
+gifLocation.innerHTML = ""
+
 message2.innerHTML = '';
 message4.innerHTML = '<button class=buttons2 onclick=next1()>Next</button>';
+captainAmerica++
+thor++
+spiderMan++
+blackWidow++
+captainMarvel++
+userInputApi('not annoying')
 }
 
 function q5c() {
-message3.innerHTML = 'Correct.';
+gifLocation.innerHTML = ""
 message2.innerHTML = '';
 message4.innerHTML = '<button class=buttons2 onclick=next1()>Next</button>';
+captainAmerica++
+spiderMan++
+captainMarvel++
+userInputApi('second chance')
 }
 
 function q5i() {
-message3.innerHTML = 'Incorrect.';
+gifLocation.innerHTML = ""
+
 message2.innerHTML = '';
 message4.innerHTML = '<button class=buttons2 onclick=next1()>Next</button>';
+ironMan++
+hulk++
+thor++
+blackWidow++
+userInputApi('no chance')
 }
 
 function q6c() {
-message3.innerHTML = 'Correct.';
+gifLocation.innerHTML = ""
 message2.innerHTML = '';
 message4.innerHTML = '<button class=buttons2 onclick=next1()>Next</button>';
+ironMan++
+captainAmerica++
+spiderMan++
+userInputApi('smart')
 }
 
 function q6i() {
-message3.innerHTML = 'Incorrect.';
+gifLocation.innerHTML = ""
+
 message2.innerHTML = '';
 message4.innerHTML = '<button class=buttons2 onclick=next1()>Next</button>';
+hulk++
+thor++
+blackWidow++
+captainMarvel++
+userInputApi('stupid')
 }
 
 function q7c() {
-message3.innerHTML = 'Correct.';
+gifLocation.innerHTML = ""
 message2.innerHTML = '';
 message4.innerHTML = '<button class=buttons2 onclick=next1()>Next</button>';
+ironMan++
+hulk++
+thor++
+spiderMan++
+captainMarvel++
+userInputApi('alone')
 }
 
 function q7i() {
-message3.innerHTML = 'Incorrect.';
+gifLocation.innerHTML = ""
+
 message2.innerHTML = '';
 message4.innerHTML = '<button class=buttons2 onclick=next1()>Next</button>';
+captainAmerica++
+blackWidow++
+userInputApi('teamwork')
 }
 
 function q8c() {
-message3.innerHTML = 'Correct.';
+gifLocation.innerHTML = ""
 message2.innerHTML = '';
 message4.innerHTML = '<button class=buttons2 onclick=next1()>Next</button>';
+captainAmerica++
+spiderMan++
+userInputApi('optimist')
 }
 
 function q8i() {
-message3.innerHTML = 'Incorrect.';
+gifLocation.innerHTML = ""
+
 message2.innerHTML = '';
 message4.innerHTML = '<button class=buttons2 onclick=next1()>Next</button>';
+hulk++
+thor++
+blackWidow++
+captainMarvel++
+ironMan++
+userInputApi('sad')
 }
 
 function q9c() {
-message3.innerHTML = 'Correct.';
+gifLocation.innerHTML = ""
 message2.innerHTML = '';
 message4.innerHTML = '<button class=buttons2 onclick=next1()>Next</button>';
+thor++
+blackWidow++
+captainMarvel++
+spiderMan++
+userInputApi('dreamer')
 }
 
 function q9i() {
-message3.innerHTML = 'Incorrect.';
+gifLocation.innerHTML = ""
+
 message2.innerHTML = '';
 message4.innerHTML = '<button class=buttons2 onclick=next1()>Next</button>';
+ironMan++
+hulk++
+spiderMan++
+userInputApi("don' dream")
 }
 
 function q10c() {
-message3.innerHTML = 'Correct.';
+gifLocation.innerHTML = ""
 message2.innerHTML = '';
 message4.innerHTML = '<button class=buttons2 onclick=next1()>Next</button>';
+captainAmerica++
+spiderMan++
+blackWidow++
+captainMarvel++
+userInputApi('calculate')
 }
 
 function q10i() {
-message3.innerHTML = 'Incorrect.';
+gifLocation.innerHTML = ""
+
 message2.innerHTML = '';
 message4.innerHTML = '<button class=buttons2 onclick=next1()>Next</button>';
+ironMan++
+hulk++
+thor++
+userInputApi('reckless')
 }
+
+function q11c() {
+  gifLocation.innerHTML = ""
+
+  message2.innerHTML = '';
+  message4.innerHTML = '<button class=buttons2 onclick=next1()>Next</button>';
+  ironMan++
+  captainAmerica++
+  blackWidow++
+  userInputApi('calm')
+  }
+  
+  function q11i() {
+  gifLocation.innerHTML = ""
+  
+  message2.innerHTML = '';
+  message4.innerHTML = '<button class=buttons2 onclick=next1()>Next</button>';
+  hulk++
+  thor++
+  spiderMan++
+  captainAmerica++
+  userInputApi('emotional')
+  }
 
 function next1() {
 if (a == '2') {
   message1.innerHTML = question1[1];
   message2.innerHTML = options2;
-  message3.innerHTML = 'TEST DOES THIS WORK';
   number1.innerHTML = a++;
-  message4.innerHTML = 'TESTTESTESTSET 2';
 }
 
 else if (a == '3') {
   message1.innerHTML = question1[2];
   message2.innerHTML = options3;
-  message3.innerHTML = '';
   number1.innerHTML = a++;
-  message4.innerHTML = 'TESTTESTSETSET';
 }
 
 else if (a == '4') {
   message1.innerHTML = question1[3];
   message2.innerHTML = options4;
-  message3.innerHTML = '';
   number1.innerHTML = a++;
-  message4.innerHTML = '';
+
 }
 
 else if (a == '5') {
   message1.innerHTML = question1[4];
   message2.innerHTML = options5;
-  message3.innerHTML = '';
   number1.innerHTML = a++;
-  message4.innerHTML = '';
+
 }
 
 else if (a == '6') {
   message1.innerHTML = question1[5];
   message2.innerHTML = options6;
-  message3.innerHTML = '';
   number1.innerHTML = a++;
-  message4.innerHTML = '';
+
 }
 
 else if (a == '7') {
   message1.innerHTML = question1[6];
   message2.innerHTML = options7;
-  message3.innerHTML = '';
   number1.innerHTML = a++;
-  message4.innerHTML = '';
+
 }
 
 else if (a == '8') {
   message1.innerHTML = question1[7];
   message2.innerHTML = options8;
-  message3.innerHTML = '';
   number1.innerHTML = a++;
-  message4.innerHTML = '';
+
 }
 
 else if (a == '9') {
   message1.innerHTML = question1[8];
   message2.innerHTML = options9;
-  message3.innerHTML = '';
   number1.innerHTML = a++;
-  message4.innerHTML = '';
+
 }
 
 else if (a == '10') {
   message1.innerHTML = question1[9];
   message2.innerHTML = options10;
-  message3.innerHTML = '';
   number1.innerHTML = a++;
-  message4.innerHTML = '';
+
+} else if (a == '11') {
+  message1.innerHTML = question1[10]
+  message2.innerHTML = options11
+  number1.innerHTML = a++
 } else {
   message1.innerHTML = 'End of Quiz';
   message2.innerHTML = '';
-  message3.innerHTML = '';
   message4.innerHTML = '<button class=buttons2 onclick=restart1()>Restart</button>';
 }
 }
