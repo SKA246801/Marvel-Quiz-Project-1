@@ -297,6 +297,14 @@ function q11i() {
   spiderMan++
   captainAmerica++
   userInputApi('emotional')
+  }
+
+function next1() {
+if (a == '2') {
+  message1.innerHTML = question1[1];
+  message2.innerHTML = options2;
+  message4.innerHTML = ''
+  number1.innerHTML = a++;
 }
 
 function next1() {
@@ -309,12 +317,14 @@ function next1() {
   else if (a == '3') {
   message1.innerHTML = question1[2];
   message2.innerHTML = options3;
+  message4.innerHTML = ''
   number1.innerHTML = a++;
 }
 
 else if (a == '4') {
   message1.innerHTML = question1[3];
   message2.innerHTML = options4;
+  message4.innerHTML = ''
   number1.innerHTML = a++;
   
 }
@@ -322,6 +332,7 @@ else if (a == '4') {
 else if (a == '5') {
   message1.innerHTML = question1[4];
   message2.innerHTML = options5;
+  message4.innerHTML = ''
   number1.innerHTML = a++;
 
 }
@@ -329,6 +340,7 @@ else if (a == '5') {
 else if (a == '6') {
   message1.innerHTML = question1[5];
   message2.innerHTML = options6;
+  message4.innerHTML = ''
   number1.innerHTML = a++;
 
 }
@@ -336,6 +348,7 @@ else if (a == '6') {
 else if (a == '7') {
   message1.innerHTML = question1[6];
   message2.innerHTML = options7;
+  message4.innerHTML = ''
   number1.innerHTML = a++;
   
 }
@@ -343,6 +356,7 @@ else if (a == '7') {
 else if (a == '8') {
   message1.innerHTML = question1[7];
   message2.innerHTML = options8;
+  message4.innerHTML = ''
   number1.innerHTML = a++;
 
 }
@@ -350,6 +364,7 @@ else if (a == '8') {
 else if (a == '9') {
   message1.innerHTML = question1[8];
   message2.innerHTML = options9;
+  message4.innerHTML = ''
   number1.innerHTML = a++;
   
 }
@@ -357,11 +372,13 @@ else if (a == '9') {
 else if (a == '10') {
   message1.innerHTML = question1[9];
   message2.innerHTML = options10;
+  message4.innerHTML = ''
   number1.innerHTML = a++;
   
 } else if (a == '11') {
   message1.innerHTML = question1[10]
   message2.innerHTML = options11
+  message4.innerHTML = ''
   number1.innerHTML = a++
 } else {
   message1.innerHTML = 'End of Quiz';
