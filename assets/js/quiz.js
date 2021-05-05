@@ -410,7 +410,7 @@ const finalHero = () => {
 };
 
 const setLocalStorageHeroFunc = (input) => {
-  //set local storage here
+  localStorage.setItem('heroName', input) 
 };
 
 begin1();
