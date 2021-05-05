@@ -248,7 +248,7 @@ function q9c() {
   scores.thor++;
   scores.blackWidow++;
   scores.spiderMan++;
-  userInputApi("dreamer");
+  userInputApi("don't dream");
 }
 
 function q9i() {
@@ -259,7 +259,7 @@ function q9i() {
   scores.ironMan++;
   scores.hulk++;
   scores.spiderMan++;
-  userInputApi("don't dream");
+  userInputApi("dreamer");
 }
 
 function q10c() {
