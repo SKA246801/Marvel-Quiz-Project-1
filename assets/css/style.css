@@ -1,5 +1,19 @@
+* {
+    background-color: rgb(48, 48, 48);
+    color: white;
+    margin: 0px;
+    padding: 0px;
+}
 html {
     font-family: GillSans, Calibri, Trebuchet, sans-serif;
+}
+
+.quiz-title {
+    font-size: 4.5vw;
+}
+
+.click-here {
+    font-size: 2.75vw;
 }
 
 .section {
@@ -16,35 +30,59 @@ html {
 }
 
 #startBtn {
-    color: black;
+    color: white;
+    background-color: rgb(157, 11, 11);
+}
+
+#startBtn:hover {
+    box-shadow: 5px 4px 100px 0px rgb(157, 11, 11);
+    transition: transform 150ms;    
+    transform: scale(1.03);
+    cursor: pointer;
 }
 
 img {
     border-radius: 8%;
-
 }
 
 .questions {
     padding-top: 50px;
-    font-size: 20px;
+    font-size: 3vw;
 }
 
 .buttons1 {
-    background-color: #8c8f91;
+    background-color: rgb(157, 11, 11);
     border: none;
-    padding: 8px 5px 8px 5px;
+    margin-top: 25px;;
+    padding: 15px 10px 15px 10px;
     border-radius: 8%;
-    font-size: medium;
+    font-size: 2vw;
     font-family: GillSans, Calibri, Trebuchet, sans-serif;
-    box-shadow: 2px 3px #7f8285;
+}
+
+.buttons1:hover {
+    box-shadow: 5px 4px 100px 0px rgb(157, 11, 11);
+    transition: transform 150ms;
+    transform: scale(1.03);
+    cursor: pointer;
 }
 
 .buttons2 {
-    background-color: #8c8f91;
+    background-color: rgb(157, 11, 11);
     border: none;
-    padding: 8px 7px 8px 7px;
+    padding: 15px 10px 15px 10px;
     border-radius: 8%;
-    font-size: medium;
+    font-size: 2vw;
     font-family: GillSans, Calibri, Trebuchet, sans-serif;
-    box-shadow: 2px 3px #7f8285;
+}
+
+.buttons2:hover {
+    box-shadow: 5px 4px 100px 0px rgb(157, 11, 11);
+    transition: transform 150ms;
+    transform: scale(1.03);
+    cursor: pointer;
+}
+
+.gif {
+    padding-top: 40px;
 }
