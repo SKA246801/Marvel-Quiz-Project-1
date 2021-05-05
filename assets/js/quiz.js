@@ -16,7 +16,7 @@ const userInputApi = function (gifSearch) {
 };
 
 // Written questions
-const question1 = [
+const question = [
   "Power is not something to be taken lightly.",
   "Not even a murderer deserves to die.",
   "Negotiations work much better than fighting.",
@@ -78,7 +78,7 @@ let scores = {
 //  if statement for q and a
 function begin1() {
   disappear1.innerHTML = "";
-  message1.innerHTML = question1[0];
+  message1.innerHTML = question[0];
   message2.innerHTML = options1;
   number1.innerHTML = a++;
 }
@@ -253,7 +253,6 @@ function q9c() {
 
 function q9i() {
   gifLocation.innerHTML = "";
-
   message2.innerHTML = "";
   message4.innerHTML = "<button class=buttons2 onclick=next1()>Next</button>";
   scores.ironMan++;
@@ -304,52 +303,52 @@ function q11i() {
 
 function next1() {
   if (a == "2") {
-    message1.innerHTML = question1[1];
+    message1.innerHTML = question[1];
     message2.innerHTML = options2;
     message4.innerHTML = "";
     number1.innerHTML = a++;
   } else if (a == "3") {
-    message1.innerHTML = question1[2];
+    message1.innerHTML = question[2];
     message2.innerHTML = options3;
     message4.innerHTML = "";
     number1.innerHTML = a++;
   } else if (a == "4") {
-    message1.innerHTML = question1[3];
+    message1.innerHTML = question[3];
     message2.innerHTML = options4;
     message4.innerHTML = "";
     number1.innerHTML = a++;
   } else if (a == "5") {
-    message1.innerHTML = question1[4];
+    message1.innerHTML = question[4];
     message2.innerHTML = options5;
     message4.innerHTML = "";
     number1.innerHTML = a++;
   } else if (a == "6") {
-    message1.innerHTML = question1[5];
+    message1.innerHTML = question[5];
     message2.innerHTML = options6;
     message4.innerHTML = "";
     number1.innerHTML = a++;
   } else if (a == "7") {
-    message1.innerHTML = question1[6];
+    message1.innerHTML = question[6];
     message2.innerHTML = options7;
     message4.innerHTML = "";
     number1.innerHTML = a++;
   } else if (a == "8") {
-    message1.innerHTML = question1[7];
+    message1.innerHTML = question[7];
     message2.innerHTML = options8;
     message4.innerHTML = "";
     number1.innerHTML = a++;
   } else if (a == "9") {
-    message1.innerHTML = question1[8];
+    message1.innerHTML = question[8];
     message2.innerHTML = options9;
     message4.innerHTML = "";
     number1.innerHTML = a++;
   } else if (a == "10") {
-    message1.innerHTML = question1[9];
+    message1.innerHTML = question[9];
     message2.innerHTML = options10;
     message4.innerHTML = "";
     number1.innerHTML = a++;
   } else if (a == "11") {
-    message1.innerHTML = question1[10];
+    message1.innerHTML = question[10];
     message2.innerHTML = options11;
     message4.innerHTML = "";
     number1.innerHTML = a++;
