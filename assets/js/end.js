@@ -1,7 +1,8 @@
 // `${data.data.results[0].thumbnail.path}/portrait_uncanny.${data.data.results[0].thumbnail.extension}` this is the src needed for the img
 const PUBLIC_KEY = "407e4467d27709793035e60508d32fdf";
 const PRIVATE_KEY = "d49a689257f6451c7403a124fd37f1845b3719cc";
-let finalHero = ""; // <------------ get local storage here and set the variable
+let finalHero = localStorage.getItem('heroName');
+
 
 // function to be used to restart the quiz
 function restart1() {
@@ -10,13 +11,21 @@ function restart1() {
 }
 
 const fetchHero = async (chosenHero) => {
+  console.log(chosenHero);
   let ts = Date.now();
   let hashKey = md5(ts + PRIVATE_KEY + PUBLIC_KEY);
   let request = await fetch(
     `https://gateway.marvel.com:443/v1/public/characters?ts=${ts}&apikey=${PUBLIC_KEY}&hash=${hashKey}&name=${chosenHero}`
   );
   let data = await request.json();
-  displayHero(data.data);
+  generateHeroPage(data.data);
 };
+
+function generateHeroPage (heroInfo) {
+  console.log(heroInfo);
+  document.getElementById("hero-name").innerHTML = heroInfo.results[0].name;
+  document.getElementById("description").innerHTML = heroInfo.results[0].description;
+  document.getElementById("thumbnail").setAttribute("src", `${heroInfo.results[0].thumbnail.path}/portrait_uncanny.${heroInfo.results[0].thumbnail.extension}`)
+}
 
 fetchHero(finalHero);
