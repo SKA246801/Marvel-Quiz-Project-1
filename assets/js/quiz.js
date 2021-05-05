@@ -73,7 +73,6 @@ let scores = {
   hulk: 0,
   spiderMan: 0,
   blackWidow: 0,
-  captainMarvel: 0,
 };
 
 //  if statement for q and a
@@ -90,7 +89,6 @@ function q1c() {
   scores.captainAmerica++;
   scores.spiderMan++;
   scores.blackWidow++;
-  scores.captainMarvel++;
   userInputApi("weak");
 }
 
@@ -109,13 +107,11 @@ function q2c() {
   message4.innerHTML = "<button class=buttons2 onclick=next1()>Next</button>";
   scores.captainAmerica++;
   scores.spiderMan++;
-  scores.captainMarvel++;
   userInputApi("alive");
 }
 
 function q2i() {
   gifLocation.innerHTML = "";
-
   message2.innerHTML = "";
   message4.innerHTML = "<button class=buttons2 onclick=next1()>Next</button>";
   scores.ironMan++;
@@ -138,12 +134,10 @@ function q3c() {
 
 function q3i() {
   gifLocation.innerHTML = "";
-
   message2.innerHTML = "";
   message4.innerHTML = "<button class=buttons2 onclick=next1()>Next</button>";
   scores.hulk++;
   scores.thor++;
-  scores.captainMarvel++;
   userInputApi("fighting");
 }
 
@@ -158,14 +152,12 @@ function q4c() {
 
 function q4i() {
   gifLocation.innerHTML = "";
-
   message2.innerHTML = "";
   message4.innerHTML = "<button class=buttons2 onclick=next1()>Next</button>";
   scores.captainAmerica++;
   scores.thor++;
   scores.spiderMan++;
   scores.blackWidow++;
-  scores.captainMarvel++;
   userInputApi("not annoying");
 }
 
@@ -175,13 +167,11 @@ function q5c() {
   message4.innerHTML = "<button class=buttons2 onclick=next1()>Next</button>";
   scores.captainAmerica++;
   scores.spiderMan++;
-  scores.captainMarvel++;
   userInputApi("second chance");
 }
 
 function q5i() {
   gifLocation.innerHTML = "";
-
   message2.innerHTML = "";
   message4.innerHTML = "<button class=buttons2 onclick=next1()>Next</button>";
   scores.ironMan++;
@@ -203,13 +193,11 @@ function q6c() {
 
 function q6i() {
   gifLocation.innerHTML = "";
-
   message2.innerHTML = "";
   message4.innerHTML = "<button class=buttons2 onclick=next1()>Next</button>";
   scores.hulk++;
   scores.thor++;
   scores.blackWidow++;
-  scores.captainMarvel++;
   userInputApi("stupid");
 }
 
@@ -221,13 +209,11 @@ function q7c() {
   scores.hulk++;
   scores.thor++;
   scores.spiderMan++;
-  scores.captainMarvel++;
   userInputApi("alone");
 }
 
 function q7i() {
   gifLocation.innerHTML = "";
-
   message2.innerHTML = "";
   message4.innerHTML = "<button class=buttons2 onclick=next1()>Next</button>";
   scores.captainAmerica++;
@@ -246,13 +232,11 @@ function q8c() {
 
 function q8i() {
   gifLocation.innerHTML = "";
-
   message2.innerHTML = "";
   message4.innerHTML = "<button class=buttons2 onclick=next1()>Next</button>";
   scores.hulk++;
   scores.thor++;
   scores.blackWidow++;
-  scores.captainMarvel++;
   scores.ironMan++;
   userInputApi("sad");
 }
@@ -263,7 +247,6 @@ function q9c() {
   message4.innerHTML = "<button class=buttons2 onclick=next1()>Next</button>";
   scores.thor++;
   scores.blackWidow++;
-  scores.captainMarvel++;
   scores.spiderMan++;
   userInputApi("dreamer");
 }
@@ -286,13 +269,11 @@ function q10c() {
   scores.captainAmerica++;
   scores.spiderMan++;
   scores.blackWidow++;
-  scores.captainMarvel++;
   userInputApi("calculate");
 }
 
 function q10i() {
   gifLocation.innerHTML = "";
-
   message2.innerHTML = "";
   message4.innerHTML = "<button class=buttons2 onclick=next1()>Next</button>";
   scores.ironMan++;
@@ -303,7 +284,6 @@ function q10i() {
 
 function q11c() {
   gifLocation.innerHTML = "";
-
   message2.innerHTML = "";
   message4.innerHTML = "<button class=buttons2 onclick=next1()>Next</button>";
   scores.ironMan++;
@@ -314,13 +294,11 @@ function q11c() {
 
 function q11i() {
   gifLocation.innerHTML = "";
-
   message2.innerHTML = "";
   message4.innerHTML = "<button class=buttons2 onclick=next1()>Next</button>";
   scores.hulk++;
   scores.thor++;
   scores.spiderMan++;
-  scores.captainMarvel++;
   userInputApi("emotional");
 }
 
@@ -403,9 +381,8 @@ const finalHero = () => {
     chosenHero = "Black Widow";
   } else if (chosenHero === "ironMan") {
     chosenHero = "Iron Man";
-  } else if (chosenHero === "captainMarvel") {
-    chosenHero = "Carol Danvers";
   }
+
   setLocalStorageHeroFunc(chosenHero);
 };
 
