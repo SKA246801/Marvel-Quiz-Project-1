@@ -378,22 +378,13 @@ function next1() {
   } else {
     message1.innerHTML = "End of Quiz";
     message2.innerHTML = "";
-    message4.innerHTML =
-      "<button class=buttons2 onclick=restart1()>Restart</button>";
-    console.log("ironMan" + scores.ironMan);
-    console.log("hulk" + scores.hulk);
-    console.log("captainAmerica" + scores.captainAmerica);
-    console.log("captainMarvel" + scores.captainMarvel);
-    console.log("thor" + scores.thor);
-    console.log("blackWidow" + scores.blackWidow);
-    console.log("spiderMan" + scores.spiderMan);
+    message4.innerHTML = ""
     finalHero();
+    location.href = 'end.html'
   }
 }
 
-function restart1() {
-  location.reload();
-}
+
 
 const finalHero = () => {
   let chosenHero = "captainAmerica";
@@ -417,22 +408,26 @@ const finalHero = () => {
   } else if (chosenHero === 'captainMarvel') {
     chosenHero = 'Carol Danvers'
   }
-  generateHero(chosenHero)
+  fetchHero(chosenHero)
 };
 
+
+let heroName = document.querySelector('.hero-name')
+const displayHero = (chosenHero) => {
+  heroName.innerHTML = chosenHero.results[0].name
+}
 
 const PUBLIC_KEY = "407e4467d27709793035e60508d32fdf";
 const PRIVATE_KEY = "d49a689257f6451c7403a124fd37f1845b3719cc";
 
-const generateHero = async (chosenHero) => {
+const fetchHero = async (chosenHero) => {
   let ts = Date.now();
   let hashKey = md5(ts + PRIVATE_KEY + PUBLIC_KEY);
   let request = await fetch(
     `https://gateway.marvel.com:443/v1/public/characters?ts=${ts}&apikey=${PUBLIC_KEY}&hash=${hashKey}&name=${chosenHero}`
-  );
-  let data = await request.json();
-  console.log(data);
-
-}
+    );
+    let data = await request.json();
+    displayHero(data.data)
+  }
 
 begin1();
