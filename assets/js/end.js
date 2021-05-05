@@ -3,10 +3,11 @@ const PUBLIC_KEY = "407e4467d27709793035e60508d32fdf";
 const PRIVATE_KEY = "d49a689257f6451c7403a124fd37f1845b3719cc";
 let finalHero = localStorage.getItem('heroName');
 
-
 // function to be used to restart the quiz
+message1.innerHTML = "<button class=buttons2 onclick=restart1()>Restart</button>";
+
 function restart1() {
-  location.reload();
+  window.location.replace("index.html");
   //change location back to index.html
 }
 
