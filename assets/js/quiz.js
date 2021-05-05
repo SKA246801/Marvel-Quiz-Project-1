@@ -378,13 +378,11 @@ function next1() {
   } else {
     message1.innerHTML = "End of Quiz";
     message2.innerHTML = "";
-    message4.innerHTML = ""
+    message4.innerHTML = "";
     finalHero();
-    location.href = 'end.html'
+    location.href = "end.html";
   }
 }
-
-
 
 const finalHero = () => {
   let chosenHero = "captainAmerica";
@@ -397,37 +395,22 @@ const finalHero = () => {
       chosenHero = Math.random() < 0.5 ? names[i] : chosenHero;
     }
   }
-  if (chosenHero === 'captainAmerica') {
-    chosenHero = 'Captain America'
-  } else if (chosenHero === 'spiderMan') {
-    chosenHero = 'Spider-man'
-  } else if (chosenHero === 'blackWidow') {
-    chosenHero = 'Black Widow'
-  } else if (chosenHero === 'ironMan') {
-    chosenHero = 'Iron Man'
-  } else if (chosenHero === 'captainMarvel') {
-    chosenHero = 'Carol Danvers'
+  if (chosenHero === "captainAmerica") {
+    chosenHero = "Captain America";
+  } else if (chosenHero === "spiderMan") {
+    chosenHero = "Spider-man";
+  } else if (chosenHero === "blackWidow") {
+    chosenHero = "Black Widow";
+  } else if (chosenHero === "ironMan") {
+    chosenHero = "Iron Man";
+  } else if (chosenHero === "captainMarvel") {
+    chosenHero = "Carol Danvers";
   }
-  fetchHero(chosenHero)
+  setLocalStorageHeroFunc(chosenHero);
 };
 
-
-let heroName = document.querySelector('.hero-name')
-const displayHero = (chosenHero) => {
-  heroName.innerHTML = chosenHero.results[0].name
-}
-
-const PUBLIC_KEY = "407e4467d27709793035e60508d32fdf";
-const PRIVATE_KEY = "d49a689257f6451c7403a124fd37f1845b3719cc";
-
-const fetchHero = async (chosenHero) => {
-  let ts = Date.now();
-  let hashKey = md5(ts + PRIVATE_KEY + PUBLIC_KEY);
-  let request = await fetch(
-    `https://gateway.marvel.com:443/v1/public/characters?ts=${ts}&apikey=${PUBLIC_KEY}&hash=${hashKey}&name=${chosenHero}`
-    );
-    let data = await request.json();
-    displayHero(data.data)
-  }
+const setLocalStorageHeroFunc = (input) => {
+  //set local storage here
+};
 
 begin1();
