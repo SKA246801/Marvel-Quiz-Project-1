@@ -23,6 +23,10 @@ const fetchHero = async (chosenHero) => {
 
 function generateHeroPage (heroInfo) {
   console.log(heroInfo);
+
+  if (heroInfo.results[0].name === 'Black Widow') {
+    heroInfo.results[0].description = "Natalia Alianovna 'Natasha' Romanoff, also known as Black Widow (Russian: Наталья Альяновна 'Наташа' Романова), was one of the most talented spies and assassins in the entire world and a founding member of the Avengers. Originally a KGB operative and dangerous assassin, Romanoff was recruited into S.H.I.E.L.D. by Clint Barton. Having extensive mastery in martial arts and armed with her Widow's Bite, Black Widow became one of S.H.I.E.L.D.'s most efficient agents. During one mission, she was sent undercover into Stark Industries to watch Tony Stark due to the fear that he was dying. During this mission, Romanoff assisted Stark with defeating Ivan Vanko's terrorist plots against him."
+  }
   document.getElementById("hero-name").innerHTML = heroInfo.results[0].name;
   document.getElementById("description").innerHTML = heroInfo.results[0].description;
   document.getElementById("thumbnail").setAttribute("src", `${heroInfo.results[0].thumbnail.path}/portrait_uncanny.${heroInfo.results[0].thumbnail.extension}`)
