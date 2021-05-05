@@ -31,7 +31,7 @@ const question = [
 ];
 // Written answers
 const options1 = [
-  "<button class=buttons1 onclick=q1i()>Agree</button><br /><br /><button class=buttons1 onclick=q1i()>Disagree</button>",
+  "<button class=buttons1 onclick=q1c()>Agree</button><br /><br /><button class=buttons1 onclick=q1i()>Disagree</button>",
 ];
 const options2 = [
   "<button class=buttons1 onclick=q2c()>Agree</button><br /><br /><button class=buttons1 onclick=q2i()>Disagree</button>",
@@ -40,13 +40,13 @@ const options3 = [
   "<button class=buttons1 onclick=q3c()>Agree</button><br /><br /><button class=buttons1 onclick=q3i()>Disagree</button>",
 ];
 const options4 = [
-  "<button class=buttons1 onclick=q4i()>Agree</button><br /><br /><button class=buttons1 onclick=q4c()>Disagree</button>",
+  "<button class=buttons1 onclick=q4c()>Agree</button><br /><br /><button class=buttons1 onclick=q4i()>Disagree</button>",
 ];
 const options5 = [
   "<button class=buttons1 onclick=q5c()>Agree</button><br /><br /><button class=buttons1 onclick=q5i()>Disagree</button>",
 ];
 const options6 = [
-  "<button class=buttons1 onclick=q6i()>Agree</button><br /><br /><button class=buttons1 onclick=q6c()>Disagree</button>",
+  "<button class=buttons1 onclick=q6c()>Agree</button><br /><br /><button class=buttons1 onclick=q6i()>Disagree</button>",
 ];
 const options7 = [
   "<button class=buttons1 onclick=q7c()>Agree</button><br /><br /><button class=buttons1 onclick=q7i()>Disagree</button>",
