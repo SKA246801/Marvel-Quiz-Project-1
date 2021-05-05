@@ -86,3 +86,8 @@ img {
 .gif {
     padding-top: 40px;
 }
+
+#description {
+    font-size: 1.5vw;
+    margin: 0px 15px 25px 15px; 
+}
