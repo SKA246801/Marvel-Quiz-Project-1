@@ -15,7 +15,36 @@ html {
     padding-top: 40px;
 }
 
+#startBtn {
+    color: black;
+}
+
 img {
     border-radius: 8%;
 
+}
+
+.questions {
+    padding-top: 50px;
+    font-size: 20px;
+}
+
+.buttons1 {
+    background-color: #8c8f91;
+    border: none;
+    padding: 8px 5px 8px 5px;
+    border-radius: 8%;
+    font-size: medium;
+    font-family: GillSans, Calibri, Trebuchet, sans-serif;
+    box-shadow: 2px 3px #7f8285;
+}
+
+.buttons2 {
+    background-color: #8c8f91;
+    border: none;
+    padding: 8px 7px 8px 7px;
+    border-radius: 8%;
+    font-size: medium;
+    font-family: GillSans, Calibri, Trebuchet, sans-serif;
+    box-shadow: 2px 3px #7f8285;
 }
