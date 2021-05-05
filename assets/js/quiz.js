@@ -320,7 +320,7 @@ function q11i() {
   scores.hulk++;
   scores.thor++;
   scores.spiderMan++;
-  scores.captainAmerica++;
+  scores.captainMarvel++;
   userInputApi("emotional");
 }
 
@@ -407,10 +407,16 @@ const finalHero = () => {
     }
   }
   if (chosenHero === 'captainAmerica') {
-    chosenHero = 'Captain America'}
-  // } else if (chosenHero === ) {
-
-  // }
+    chosenHero = 'Captain America'
+  } else if (chosenHero === 'spiderMan') {
+    chosenHero = 'Spider-man'
+  } else if (chosenHero === 'blackWidow') {
+    chosenHero = 'Black Widow'
+  } else if (chosenHero === 'ironMan') {
+    chosenHero = 'Iron Man'
+  } else if (chosenHero === 'captainMarvel') {
+    chosenHero = 'Carol Danvers'
+  }
   generateHero(chosenHero)
 };
 
