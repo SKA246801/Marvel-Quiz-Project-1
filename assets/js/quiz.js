@@ -375,7 +375,7 @@ const finalHero = () => {
   if (chosenHero === "captainAmerica") {
     chosenHero = "Captain America";
   } else if (chosenHero === "spiderMan") {
-    chosenHero = "Spider-man";
+    chosenHero = "hulk";
   } else if (chosenHero === "blackWidow") {
     chosenHero = "Black Widow";
   } else if (chosenHero === "ironMan") {
